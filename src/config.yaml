@@ -1,0 +1,29 @@
+dev:
+  base_url: "https://www.alphavantage.co/query?"
+  symbol: ["IBM", "MSFT", "AMZN"]
+  url_params:
+    function: "TIME_SERIES_INTRADAY"
+    interval: "60min"
+    outputsize: "compact"
+    datatype: "json"
+  aws_s3_bucket_name: alpha-vantage-dev
+
+qa:
+  base_url: "https://www.alphavantage.co/query?"
+  symbol: "IBM"
+  url_params:
+    function: "TIME_SERIES_INTRADAY"
+    interval: "60min"
+    outputsize: "compact"
+    datatype: "json"
+  aws_s3_bucket_name: alpha-vantage-qa
+
+prod:
+  base_url: "https://www.alphavantage.co/query?"
+  symbol: "IBM"
+  url_params:
+    function: "TIME_SERIES_INTRADAY"
+    interval: "60min"
+    outputsize: "compact"
+    datatype: "json"
+  aws_s3_bucket_name: alpha-vantage-prod
