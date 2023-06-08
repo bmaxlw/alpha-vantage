@@ -7,7 +7,7 @@ from src.aws_handler import AWSHandler
 
 if __name__ == "__main__":
     environment  = os.environ.get("ENVIRONMENT", "dev")
-    config_path  = os.environ.get("CONFIG_PATH", "config.yaml")
+    config_path  = os.environ.get("CONFIG_PATH", "src/config.yaml")
     aws_location = os.environ.get("AWS_DEFAULT_LOCATION")
     if all([environment, config_path, aws_location]):
         config       = parse_config(config_path).get(environment)
